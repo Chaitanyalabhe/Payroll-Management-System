@@ -1,0 +1,230 @@
+/* Settings.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #F8F9FD;
+  }
+  
+  .settings-dashboard-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  /* Top header styles */
+  .settings-top-header {
+    position: relative;
+    width: 1440px;
+    height: 102px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E8E8E8;
+    margin-left: -110px;
+  }
+  
+  .settings-company-logo {
+    display: flex;
+    align-items: center;
+    color: #4ECB71;
+    font-weight: 600;
+  }
+  
+  .settings-company-name {
+    margin-right: 5px;
+  }
+  
+  .settings-company-icon {
+    color: #FF9F43;
+    font-weight: bold;
+  }
+  
+  .settings-system-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    transform: translateX(-420px);
+  }
+  
+  /* Sidebar styles */
+  .settings-sidebar {
+    position: absolute;
+    width: 290px;
+    height: 680px;
+    left: -110px;
+    top: 105px;
+    background: #FFFFFF;
+    border-right: 1px solid #E8E8E8;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .settings-sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    cursor: pointer;
+    color: #718096;
+    transition: all 0.3s ease;
+  }
+  
+  .settings-sidebar-item.settings-active {
+    color: #4339F2;
+    background-color: #F6F5FF;
+    border-left: 3px solid #4339F2;
+  }
+  
+  .settings-sidebar-icon {
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .settings-bottom-item {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Main content styles */
+  .settings-main-content {
+    position: absolute;
+    left: 288px;
+    top: 102px;
+    width: calc(100% - 288px);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  /* Settings container styles */
+  .settings-container {
+    width: 100%;
+    max-width: 500px;
+    background: #FFFFFF;
+    border: 1px solid #ECEEF7;
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .settings-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 40px;
+    align-self: center;
+  }
+  
+  .settings-profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .settings-avatar-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid #ECEEF7;
+  }
+  
+  .settings-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .settings-user-name {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  .settings-buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .settings-button {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ECEEF7;
+    border-radius: 5px;
+    background: #FFFFFF;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .settings-button:hover {
+    background: #F8F9FD;
+  }
+  
+  .settings-logout-button {
+    background: #FFFFFF;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media screen and (max-width: 1200px) {
+    .settings-sidebar {
+      width: 200px;
+    }
+    
+    .settings-main-content {
+      left: 200px;
+      width: calc(100% - 200px);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .settings-sidebar {
+      width: 70px;
+      padding-top: 20px;
+    }
+    
+    .settings-sidebar-item {
+      padding: 20px;
+      justify-content: center;
+    }
+    
+    .settings-sidebar-item span {
+      display: none;
+    }
+    
+    .settings-sidebar-icon {
+      margin-right: 0;
+    }
+    
+    .settings-main-content {
+      left: 70px;
+      width: calc(100% - 70px);
+    }
+    
+    .settings-container {
+      padding: 20px;
+    }
+  }

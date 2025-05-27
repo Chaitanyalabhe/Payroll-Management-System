@@ -1,0 +1,271 @@
+/* Dashboard.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #F8F9FD;
+}
+
+.dashboard-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Top header styles */
+.top-header {
+  position: relative;
+  width: 1440px;
+  height: 102px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E8E8E8;
+  margin-left: -110px;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  color: #4ECB71;
+  font-weight: 600;
+}
+
+.company-name {
+  margin-right: 5px;
+}
+
+.company-icon {
+  color: #FF9F43;
+  font-weight: bold;
+}
+
+.system-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  transform: translateX(-420px);
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: absolute;
+  width: 290px;
+  height: 510px;
+  left: -110px;
+  top: 105px;
+  background: #FFFFFF;
+  border-right: 1px solid #E8E8E8;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  cursor: pointer;
+  color: #718096;
+  transition: all 0.3s ease;
+}
+
+.sidebar-item.active {
+  color: #4339F2;
+  background-color: #F6F5FF;
+  border-left: 3px solid #4339F2;
+}
+
+.sidebar-icon {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-item {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+/* Main content styles */
+.main-content {
+  position: absolute;
+  left: 288px;
+  top: 90px;
+  width: calc(100% - 288px);
+  padding: 30px;
+}
+
+/* Stats cards styles */
+.stats-container {
+  display: flex;
+  width: 1130px;
+  gap: 27px;
+  margin-bottom: 27px;
+  margin-left: -125px;
+}
+
+.stats-card {
+  box-sizing: border-box;
+  width: 990px;
+  height: 140px;
+  background: #FFFFFF;
+  border: 2px solid #ECEEF7;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-title {
+  font-size: 16px;
+  color: #718096;
+  margin-bottom: 10px;
+  margin-left: -350px;
+}
+
+.stats-title1 {
+  font-size: 16px;
+  color: #718096;
+  margin-bottom: 10px;
+  margin-left: -320px;
+}
+
+.stats-number {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+  margin-left: -430px;
+}
+
+.stats-label {
+  font-size: 14px;
+  color: #A0AEC0;
+  margin-left: -400px;
+}
+
+/* Employee list section styles */
+.employee-list-section {
+  box-sizing: border-box;
+  width: 1130px;
+  height: 500px;
+  background: #FFFFFF;
+  border: 1.81193px solid #ECEEF7;
+  border-radius: 6px;
+  padding: 20px;
+  margin-left: -125px;
+}
+
+.employee-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.employee-list-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.see-all-btn {
+  background: none;
+  border: 1px solid #718096;
+  color: #718096;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 5px;
+}
+
+/* Employee table styles */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table th {
+  text-align: left;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #718096;
+  border-bottom: 1px solid #ECEEF7;
+}
+
+.employee-table td {
+  padding: 20px;
+  border-bottom: 1px solid #ECEEF7;
+  font-size: 14px;
+  color: #2D3748;
+  text-align: left;
+}
+
+.employee-table td.permanent {
+  color: #4ECB71;
+}
+
+.employee-table td.intern {
+  color: #FF9F43;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1200px) {
+  .stats-container {
+    flex-direction: column;
+  }
+  
+  .stats-card {
+    width: 100%;
+  }
+  
+  .sidebar {
+    width: 200px;
+  }
+  
+  .main-content {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+    padding-top: 20px;
+  }
+  
+  .sidebar-item {
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .sidebar-item span {
+    display: none;
+  }
+  
+  .sidebar-icon {
+    margin-right: 0;
+  }
+  
+  .main-content {
+    left: 70px;
+    width: calc(100% - 70px);
+  }
+}

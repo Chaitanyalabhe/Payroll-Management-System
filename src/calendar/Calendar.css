@@ -1,0 +1,265 @@
+/* Calendar.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #F8F9FD;
+}
+
+.dashboard-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Top header styles */
+.top-header {
+  position: relative;
+  width: 1440px;
+  height: 102px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E8E8E8;
+  margin-left: -110px;
+}
+
+.company-logo {
+  display: flex;
+  align-items: center;
+  color: #4ECB71;
+  font-weight: 600;
+}
+
+.company-name {
+  margin-right: 5px;
+}
+
+.company-icon {
+  color: #FF9F43;
+  font-weight: bold;
+}
+
+.system-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  transform: translateX(-420px);
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: absolute;
+  width: 290px;
+  height: 680px;
+  left: -110px;
+  top: 105px;
+  background: #FFFFFF;
+  border-right: 1px solid #E8E8E8;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  cursor: pointer;
+  color: #718096;
+  transition: all 0.3s ease;
+}
+
+.sidebar-item.active {
+  color: #4339F2;
+  background-color: #F6F5FF;
+  border-left: 3px solid #4339F2;
+}
+
+.sidebar-icon {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-item {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+/* Main content styles */
+.main-content {
+  position: absolute;
+  left: 288px;
+  top: 90px;
+  width: calc(100% - 288px);
+  padding: 30px;
+}
+
+/* Calendar specific styles */
+.calendar-container {
+  box-sizing: border-box;
+  width: 1130px;
+  height: auto;
+  min-height: 600px;
+  background: #FFFFFF;
+  border: 1.8px solid #ECEEF7;
+  border-radius: 6px;
+  padding: 20px;
+  margin-left: -125px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.current-month {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2D3748;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.month-nav {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #718096;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.month-nav:hover {
+  color: #4339F2;
+}
+
+.weekdays-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #718096;
+  padding: 10px 0;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #2D3748;
+  cursor: pointer;
+  position: relative;
+}
+
+.calendar-day:hover {
+  background-color: #F6F5FF;
+}
+
+.calendar-day.selected {
+  background-color: #FF5F57;
+  color: white;
+  border-radius: 50%;
+  width: 40px;    
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;    
+}
+
+/* Style for today's date */
+.calendar-day.today {
+  background-color: #4339F2;
+  color: white;
+  border-radius: 50%;
+  width: 40px;    
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;    
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1200px) {
+  .calendar-container {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .sidebar {
+    width: 200px;
+  }
+  
+  .main-content {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-grid {
+    gap: 5px;
+  }
+  
+  .calendar-day {
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .sidebar {
+    width: 70px;
+    padding-top: 20px;
+  }
+  
+  .sidebar-item {
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .sidebar-item span {
+    display: none;
+  }
+  
+  .sidebar-icon {
+    margin-right: 0;
+  }
+  
+  .main-content {
+    left: 70px;
+    width: calc(100% - 70px);
+  }
+}
