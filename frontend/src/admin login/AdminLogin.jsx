@@ -1,22 +1,35 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AdminLogin.css';
+import axios from 'axios';
 
 function AdminLogin() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Login attempt with:', { username, password });
-    
-    // Basic authentication logic (you can enhance this later)
-    if (username && password) {
-      // Navigate to dashboard after successful login
-      navigate('/dashboard');
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await fetch('http://localhost:5000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await res.json();
+    if (res.status === 200) {
+      alert(data.message);
+      navigate('/dashboard');l
+    } else {
+      alert(data.message);
     }
-  };
+  } catch (err) {
+    console.error('Login error:', err);
+    alert('Something went wrong. Please try again.');
+  }
+};
 
   return (
     <div className="login-container">
