@@ -2,7 +2,7 @@
 
 <h1>💼 Payroll Management System</h1>
 
-<p>A modern, responsive web application for managing intern records, tracking attendance, and generating salary slips — built with React.</p>
+<p>A modern, responsive web application for managing employee records, tracking attendance, and generating salary slips — built with React.</p>
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-payroll365.netlify.app-brightgreen?style=for-the-badge)](https://payroll365.netlify.app)
 &nbsp;
@@ -30,7 +30,7 @@ Use the following credentials to explore the admin dashboard:
 
 ## 📖 Overview
 
-**Payroll Management System** is a frontend application designed to help HR teams and administrators manage intern records, track attendance, and handle monthly payroll — all from a clean, intuitive dashboard.
+**Payroll Management System** is a frontend application designed to help HR teams and administrators manage employee records, track attendance, and handle monthly payroll — all from a clean, intuitive dashboard.
 
 > ⚠️ **Note:** This project currently includes the **frontend only**. Backend integration is in progress.
 
@@ -38,7 +38,7 @@ Use the following credentials to explore the admin dashboard:
 
 ## ✨ Features
 
-- 🧑‍💼 **Intern Management** — Add, view, update, and delete intern records
+- 🧑‍💼 **Employee Management** — Add, view, update, and delete employee records
 - 💰 **Salary Slip Generation** — Generate and download salary slips instantly
 - 📅 **Monthly Payroll View** — Manage and review payroll month by month
 - 📊 **Admin Dashboard** — Visual statistics and payroll overview at a glance
@@ -89,7 +89,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 src/
 ├── components/
 │   ├── Dashboard/        # Admin dashboard & stats
-│   ├── Interns/          # Intern CRUD components
+│   ├── Employees/          # Employee CRUD components
 │   ├── Payroll/          # Salary slip generation
 │   ├── Attendance/       # Attendance tracking
 │   └── Auth/             # Login & access control
@@ -106,7 +106,7 @@ src/
 
 | Feature | Status |
 |---------|--------|
-| Intern Records (Add / View / Edit / Delete) | ✅ Done |
+| Employee Records (Add / View / Edit / Delete) | ✅ Done |
 | Salary Slip Generation & Download | ✅ Done |
 | Monthly Payroll View | ✅ Done |
 | Admin Dashboard with Statistics | ✅ Done |
@@ -118,7 +118,7 @@ src/
 ## 🗺️ Roadmap
 
 ### Frontend
-- [ ] Search and filter interns
+- [ ] Search and filter employees
 - [ ] Export payroll data to Excel / PDF
 - [ ] Pagination for large datasets
 - [ ] Dark mode support
