@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>💼 Payroll Management System</h1>
+<h1>Payroll Management System</h1>
 
 <p>A modern, responsive web application for managing employee records, tracking attendance, and generating salary slips — built with React.</p>
 
