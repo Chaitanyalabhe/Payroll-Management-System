@@ -9,25 +9,14 @@ function AdminLogin() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
   e.preventDefault();
-  try {
-    const res = await fetch('http://localhost:5000/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
-    });
 
-    const data = await res.json();
-    if (res.status === 200) {
-      alert(data.message);
-      navigate('/dashboard');l
-    } else {
-      alert(data.message);
-    }
-  } catch (err) {
-    console.error('Login error:', err);
-    alert('Something went wrong. Please try again.');
+  if (username === "admin" && password === "admin123") {
+    alert("Login Successful");
+    navigate("/dashboard");
+  } else {
+    alert("Invalid username or password");
   }
 };
 
